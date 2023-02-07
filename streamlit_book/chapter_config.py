@@ -100,7 +100,7 @@ def set_chapter_config(
             st.session_state.user_id = user_id
             st.session_state.token = token
 
-
+    """
     # Save answers behavior
     if st.session_state.save_answers:
         if "warned_about_save_answers" not in st.session_state:
@@ -108,11 +108,11 @@ def set_chapter_config(
                 st.session_state.warned_about_save_answers = True
             c1, c2 = st.columns([8,1])
             user_url = f"?token={st.session_state.token}"
-            st.write(st.session_state.user_id)
             c1.warning(f"Your answers will be saved. You can relaunch the app using the following custom url (Save it!).\n\n{user_url}")
             c2.markdown("\n\n")
             c2.markdown("\n\n")
             c2.button("Dismiss", on_click=on_click)
+     """
             
     # Get the files at path level (only files, not folders)
     file_list = get_all_files(path)
