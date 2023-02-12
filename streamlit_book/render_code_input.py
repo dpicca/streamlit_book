@@ -38,7 +38,8 @@ def code_input(question, initial_code,
     :return: tuple of booleans with button press status and correctness of answer
     :rtype: tuple of bool
     """
-    user_code = st.text_input(question, initial_code)
+    st.text_area('Problem:',question)
+    user_code = st.text_area('Solution')
     # Check if the correct checkboxes are checked
     key = ("text-input:" + question + "/" + initial_code).lower().replace(" ", "_")
     if st.button(button, key=key):
