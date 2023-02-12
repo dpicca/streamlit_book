@@ -57,7 +57,7 @@ def code_input(question, initial_code,
             correct_answer = "Depends, dynamically generated"
             save_answer(question, is_correct=is_correct, user_answer=user_code, correct_answer=correct_answer)
         # Return if button is pressed and answer evaluation
-        return True, is_correct
+        return True, is_correct, user_code
     else:
         # Return if button is not pressed
-        return False, None
+        return False, None, None
